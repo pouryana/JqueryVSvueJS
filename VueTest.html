@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="jqTest.css">
     <script src="https://unpkg.com/vue"></script>
     <title>Document</title>
 </head>
@@ -11,8 +12,13 @@
     <div id="app">
         <button @click="doSomething">Click me!</button>
     </div> 
-    <div id="app1">
+    <div id="app1" style="margin-top:5px;margin-bottom:5px; width:100%;">
         <input @change="doSomething" v-model="name" type="text" placeholder="Enter your name">
+    </div>
+    <div id="app2">
+        <div id="content" :class="className">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, modi. Similique amet aliquam magni obcaecati placeat, iusto ipsum enim, perferendis earum modi debitis praesentium, consequatur dolor soluta deserunt. Saepe, laborum.
+        </div>
     </div>
     <script>
         new Vue({
@@ -38,6 +44,15 @@
                 doSomething() {
                 alert('Hello '+ this.name);
             }
+            }
+        });
+    </script>
+    <script>
+        new Vue({
+            el: '#app2',
+
+            data: {
+                className: 'red-text'
             }
         });
     </script>
