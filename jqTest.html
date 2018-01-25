@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="button">Click me!</button>
+    </div>
+    <div>
+        <input id="input" type="text" placeholder="Enter your name">
+    </div>
+    
+    <script>
+        (function() {
+            $('#button').click(function() {
+                alert('Clicked!');
+            });
+        })();
+
+        (function() {
+            $('#input').change(function() {
+                alert('Hello '+ $(this).val());
+            });
+        })();
+    </script>
+</body>
+</html>
