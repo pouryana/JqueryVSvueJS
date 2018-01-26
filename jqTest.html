@@ -19,9 +19,15 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, modi. Similique amet aliquam magni obcaecati placeat, iusto ipsum enim, perferendis earum modi debitis praesentium, consequatur dolor soluta deserunt. Saepe, laborum.
     </div>
 
-    <div id="content"></div>
+    <div id="content1"></div>
     <input type="text" id="text" placeholder="Enter your text">
     
+    <div id="content2">
+        BooHoo!
+    </div>
+     <div>
+        <button id="button1" style="margin-top:5px;margin-bottom:5px;">Toogle</button>
+     </div>
     <script>
         (function() {
             $('#button').click(function() {
@@ -39,12 +45,17 @@
 
             $('#content').addClass(className);
         })();
-    </script>
-    <script>
         (function() {
 
             $('#text').keyup(function() {
-                $('#content').html($(this).val());
+                $('#content1').html($(this).val());
+            });
+
+            })();
+        (function() {
+
+            $('#button1').click(function() {
+                $('#content2').toggle();
             });
 
             })();

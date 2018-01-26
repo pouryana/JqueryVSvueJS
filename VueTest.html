@@ -20,6 +20,10 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, modi. Similique amet aliquam magni obcaecati placeat, iusto ipsum enim, perferendis earum modi debitis praesentium, consequatur dolor soluta deserunt. Saepe, laborum.
         </div>
     </div>
+    <div id="app3">
+        <div v-html="content"></div>
+        <input type="text" placeholder="Enter your text" v-model="content">
+    </div>
     <script>
         new Vue({
             el: '#app',
@@ -31,8 +35,6 @@
             }
         });
         
-    </script>
-    <script>
         new Vue({
             el: '#app1',
 
@@ -43,17 +45,23 @@
             methods: {
                 doSomething() {
                 alert('Hello '+ this.name);
-            }
+                }
             }
         });
-    </script>
-    <script>
         new Vue({
             el: '#app2',
 
             data: {
                 className: 'red-text'
             }
+        });
+        new Vue({
+            el: '#app3',
+
+            data: {
+                content: ''
+            }
+
         });
     </script>
 </body>
